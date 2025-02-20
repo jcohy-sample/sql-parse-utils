@@ -1,0 +1,3 @@
+rootProject.name = 'sql-parse-utils'
+include "sqlTest"
+include "sql-parse"

@@ -1,0 +1,44 @@
+<databases targetDataBase="sqlserver">
+	<table>
+		<tableName>saga_menu</tableName>
+		<columns>
+			<column name="id" comments="主键" type="bigint" primaryKey="true" sort="1" targetDataType="bigint"/>
+			<column name="name" comments="名称" type="nvarchar"  sort="2" targetDataType="nvarchar(255)"/>
+			<column name="category" comments="类型" type="int"  sort="3" targetDataType="int"/>
+			<column name="create_time" comments="创建时间" type="datetime2"  sort="4" targetDataType="datetime2(0)"/>
+		</columns>
+		<datas>
+			<data>1,工作台,1,null</data>
+			<data>2,通知公告,2,null</data>
+			<data>3,系统管理,3,null</data>
+		</datas>
+	</table>
+	<table>
+		<tableName>saga_role</tableName>
+		<data/>
+		<columns>
+			<column name="id" comments="主键" type="bigint" primaryKey="true" sort="1" targetDataType="bigint"/>
+			<column name="role_name" comments="角色名" type="nvarchar"  sort="2" targetDataType="nvarchar(255)"/>
+			<column name="role_alias" comments="角色别名" type="nvarchar"  sort="3" targetDataType="nvarchar(255)"/>
+		</columns>
+		<datas>
+			<data>1,超级管理员,administrator</data>
+			<data>2,用户,user</data>
+			<data>3,人事,hr</data>
+		</datas>
+	</table>
+	<table>
+		<tableName>saga_role_menu</tableName>
+		<data/>
+		<columns>
+			<column name="id" comments="主键" type="bigint" primaryKey="true" sort="1" targetDataType="bigint"/>
+			<column name="menu_id" comments="菜单id" type="bigint"  foreignKey="true" referencedTable="saga_menu" referencedTableKey="id" sort="2" targetDataType="bigint"/>
+			<column name="role_id" comments="角色id" type="bigint"  foreignKey="true" referencedTable="saga_role" referencedTableKey="id" sort="3" targetDataType="bigint"/>
+		</columns>
+		<datas>
+			<data>1,1,1</data>
+			<data>2,1,2</data>
+			<data>3,1,2</data>
+		</datas>
+	</table>
+</databases>

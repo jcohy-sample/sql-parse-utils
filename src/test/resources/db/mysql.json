@@ -1,0 +1,48 @@
+[
+  {
+    "tableName": "test",
+    "targetDataBase": "mysql",
+    "columns": [
+      {
+        "name": "id",
+        "comments": "主键",
+        "type": "integer",
+        "columnLength": 20,
+        "primaryKey": "true",
+        "foreignKey": "false",
+        "referencedTable": "",
+        "referencedTableKey": "",
+        "sort": 1,
+        "targetDataType": "bigint(11)"
+      },
+      {
+        "name": "name",
+        "comments": "名称",
+        "type": "varchar",
+        "defaultValue": "",
+        "columnLength": 64,
+        "primaryKey": "false",
+        "foreignKey": "false",
+        "referencedTable": "",
+        "referencedTableKey": "",
+        "sort": 2,
+        "targetDataType": "varchar(50)"
+      },
+      {
+        "name": "t_id",
+        "comments": "老师id",
+        "type": "integer",
+        "defaultValue": 25,
+        "columnLength": 64,
+        "primaryKey": "false",
+        "foreignKey": "true",
+        "referencedTable": "t_teacher",
+        "referencedTableKey": "id",
+        "sort": 3,
+        "targetDataType": "bigint(11)"
+      }
+    ],
+    "data": [
+    ]
+  }
+]

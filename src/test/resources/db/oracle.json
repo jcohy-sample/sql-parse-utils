@@ -1,0 +1,47 @@
+{
+  "tableName": "test",
+  "targetDataBase": "oracle",
+  "columns": [
+    {
+      "name": "id",
+      "comments": "主键",
+      "type": "number",
+      "defaultValue": "",
+      "columnLength": 20,
+      "primaryKey": "true",
+      "foreignKey": "false",
+      "referencedTable": "",
+      "referencedTableKey": "",
+      "sort": 1,
+      "targetDataType": "number(5,0)"
+    },
+    {
+      "name": "name",
+      "comments": "名称",
+      "type": "VARCHAR2",
+      "defaultValue": "",
+      "columnLength": 64,
+      "primaryKey": "false",
+      "foreignKey": "false",
+      "referencedTable": "",
+      "referencedTableKey": "",
+      "sort": 2,
+      "targetDataType": "VARCHAR2(50)"
+    },
+    {
+      "name": "t_id",
+      "comments": "老师id",
+      "type": "number",
+      "defaultValue": 36,
+      "columnLength": 64,
+      "primaryKey": "false",
+      "foreignKey": "true",
+      "referencedTable": "t_teacher",
+      "referencedTableKey": "id",
+      "sort": 3,
+      "targetDataType": "number(7,0)"
+    }
+  ],
+  "data": [
+  ]
+}
